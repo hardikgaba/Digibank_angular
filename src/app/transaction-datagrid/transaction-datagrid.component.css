@@ -1,0 +1,13 @@
+.demo-row-is-clicked {
+    font-weight: bold;
+  }
+ .Filtercss{
+  margin-bottom: 10px;
+  box-shadow: inset;
+  border: solid;
+  border-color: #97144d;
+ }
+ .axis{
+  color:#97144d;
+  font-weight: bold;
+}

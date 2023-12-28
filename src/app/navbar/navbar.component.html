@@ -1,0 +1,35 @@
+<p>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+
+  <mat-toolbar class="navbar">
+    <span class="material-symbols-outlined"> account_balance </span>
+    <span class="logo"><span>DigiBank</span></span>
+    <span class="accsummary">
+      <button *ngIf="checkUser()" mat-button (click)="toAccSummary()">
+        Account-Summary
+      </button>
+    </span>
+    <span class="accsummary">
+      <button mat-button>About-us</button>
+    </span>
+    <span class="accsummary">
+      <button mat-button>Invest</button>
+    </span>
+    <span class="example-spacer"></span>
+    <div class="user-info">
+      <p *ngIf="checkUser()">Welcome, {{ username }}</p>
+    </div>
+    <button *ngIf="checkUser()" mat-raised-button (click)="logout()">
+      Logout
+    </button>
+  </mat-toolbar>
+</p>

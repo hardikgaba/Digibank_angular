@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+<div class="main-container">
+  <div class="login-container">
+    <div class="form-container">
+      <h2 style="color: #fff;"><b>Login</b></h2>
+<!-- Add the 'formGroup' directive to the form element -->
+<form (ngSubmit)="onsubmit()" [formGroup]="loginForm">
+  <label style="color:#fff;" for="username">Username:</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    formControlName="username"  
+    required
+  />
+  <div class="errorMessage" *ngIf=" (submitted || loginForm.get('username')?.touched) && loginForm.get('username')?.hasError('required')">
+    Username is required!
+  </div>
+
+  <label style="color:#fff;" for="password">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    formControlName="password"  
+    required
+  />
+  <div *ngIf=" submitted && loginForm.get('password')?.touched && (loginForm.get('password')?.hasError('required') || loginForm.get('password')?.hasError('invalidCredentials'))">
+    <div class="errorMessage" *ngIf="loginForm.get('password')?.hasError('required')">
+      Password is required!
+    </div>
+    <div class="errorMessage" *ngIf="loginForm.get('password')?.hasError('invalidCredentials')">
+      Invalid credentials!
+    </div>
+  </div>
+  <button type="submit">Login</button>
+</form>
+
+    </div>
+
+    <!-- <div class="image-container">
+      <img width="200px" src="../../assets/banklogodigi.jpeg" alt="Bank Logo" />
+    </div> -->
+  </div>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>DigiBank</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="../../assets/humanbank.png"
+      alt="Photo of a Shiba Inu"
+    />
+    <mat-card-content>
+      <p>
+        Our bank does not ask for the details of your account like /PIN/
+        Password/ mobile numbers etc. Therefore any one pretending to be asking
+        you for information may be fraudulent entities.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+   
+    <mat-card-content>
+      <div id="scroll-container">
+        <div id="scroll-text">
+          <p>
+            Dear Customer . Please download your annual bank statement for
+            this<br />
+            financial year by logging into Net Banking: Accounts -> Select
+            Account Type (Like 'Loan Accounts') -> More Actions -> Generate
+            Account Statement -> Search Transactions -> Enter Date Range ->
+            SEARCH.<br />
+            <br>
+
+            Security Alert 
+            <br>
+            
+            <br>• In case your mobile is deactivated without your
+            request or you get a call in this regard, somebody may be trying to
+            get a duplicate SIM/ steal your credentials like OTP (One time
+            password), Tracker ID for beneficiary registration etc  
+            <br>
+            • Our bank
+            does not ask for the details of your account like /PIN/ Password/
+            mobile numbers etc. Therefore any one pretending to be asking you
+            for information may be fraudulent entities.
+             
+            
+          </p>
+           
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<br />
+<br />
+<br />
+

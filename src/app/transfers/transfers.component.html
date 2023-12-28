@@ -1,0 +1,52 @@
+<!-- transfer.component.html
+
+<app-navbar></app-navbar>
+<div class="transfer-container">
+  <h2>Transfer Money</h2>
+  <form (submit)="transferMoney()">
+    <label for="toAccount">To Account:</label>
+    <input type="text" id="toAccount" name="toAccount" [(ngModel)]="toAccountNumber" required>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" [(ngModel)]="amount" required>
+
+    <button type="submit">Transfer</button>
+  </form>
+</div> -->
+<app-navbar></app-navbar>
+
+<div class="mainscreen">
+ <h1 class="head" >Welcome to the Payments Portal!</h1>
+  <div class="card">
+    <div class="leftside">
+      <img src="../../assets/transfer.png" class="product" alt="Shoes" />
+    </div>
+    <div class="rightside">
+      <form (submit)="transferMoney()">
+        <h2>Transfer Money</h2>
+        <label for="toAccount">To Account:</label>
+        <input
+          type="text"
+          id="toAccount"
+          class="inputbox"
+          name="toAccount"
+          [(ngModel)]="toAccountNumber"
+          required
+        />
+
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          class="inputbox"
+          name="amount"
+          id="card_number"
+          [(ngModel)]="amount"
+          required
+        />
+
+        <button type="submit" class="button">Pay</button>
+      </form>
+    </div>
+  </div>
+</div>

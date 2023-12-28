@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="account-details-container">
+    <h2 class="axis">Account Details</h2>
+    <div *ngIf="account">
+      <p >Account Number: {{ account.accountNumber }}</p>
+      <p>Account Type: {{ account.type }}</p>
+      <p>Available Balance: {{ account.balance  | currencyPipe}}</p>
+    </div>
+    <br>
+    
+  <button class="transferbtn" (click)="toTransfer()" mat-raised-button >Transfer Money</button>
+  
+   <app-transaction-datagrid></app-transaction-datagrid>
+  </div>
+  <br>
+  <br>
+  <br>

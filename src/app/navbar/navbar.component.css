@@ -1,0 +1,44 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+
+  color: white; /* Set your desired text color, e.g., white */
+  margin-right: 10px;
+  font-family: "Work Sans", sans-serif;
+
+  padding: 6px 12px; /* Adjust padding for better visual appeal */
+  border-radius: 5px; /* Add rounded corners for a more polished look */
+}
+.navbar {
+  background-color: #97144d;
+}
+.accsummary {
+  color: azure;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  margin-right: 10px;
+}
+
+.user-info p {
+  margin: 0; /* Remove default margin for the <p> element */
+}
+.mat-toolbar button {
+  margin-left: 10px; /* Add margin to the left for spacing */
+}

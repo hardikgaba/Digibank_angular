@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="mainscreen">
+<div class="account-summary-container">
+    <h2>Account Summary</h2>
+    <div *ngFor="let account of accounts" class="account-item">
+      <div>
+      <p>Account Number: {{ account.accountNumber }}</p>
+      <p>Account Type: {{ account.type }}</p>
+      <p>Available Balance: {{ account.balance | currencyPipe}} </p>
+    </div>
+      <div class="detailbtn">
+       <button mat-stroked-button  (click)="toAccDetails(account)" >Account Details</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
